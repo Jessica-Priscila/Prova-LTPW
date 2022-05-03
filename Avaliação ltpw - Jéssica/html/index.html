@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <title>SWEET DREAMS</title>
+  </head>
+  <body>
+    <section id="container">
+    <h1>SWEET DREAMS</h1>
+    <h3>Transformando sonhos em doces</h3>
+
+    <!--Informações Pessoais do Cliente-->
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputname" class="form-label">Nome</label>
+          <input type="nome" class="form-control" id="name" placeholder="Insira seu nome"
+          required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="inputtelefone" class="form-label">Telefone</label>
+          <input type="telephone" class="form-control" id="telefone" placeholder="(   ) _______ - ______">
+        </div>
+
+        <div class="col-8">
+          <label for="inputemail" class="form-label">Email</label>
+          <input type="text" class="form-control" id="email" placeholder="Insira seu email">
+        </div>
+
+    <!--Informações do Pedido-->
+        <div class="col-4">
+            <label for="inputdata" class="form-label">Data do Pedido</label>
+            <input type="date" class="form-control" id="data">
+          </div>
+    <!--Massa-->
+      <div class="col-md-4">
+        <label for="tema" class="form-label">Massa do Bolo</label>
+        <select id="massa" class="form-select">
+          <option selected>Selecione</option>
+          <option>Baunilha</option>
+          <option>Chocolate</option>
+          <option>Mista</option>
+          <option>Red Velvet</option>
+        </select>
+      </div>
+
+    <!--Tamanho-->
+      <div class="col-12">
+        Tamanho
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="tamanho" id="pp" value="pp" check onchange="calc()">
+          <label class="form-check-label" for="pp">PP</label>
+        </div>
+
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="tamanho" id="p" value="p" check onchange="calc()">
+          <label class="form-check-label" for="p">P</label>
+        </div>
+
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="tamanho" id="m" value="m" check onchange="calc()">
+          <label class="form-check-label" for="m">M</label>
+        </div>
+
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="tamanho" id="g" value="g" check onchange="calc()">
+          <label class="form-check-label" for="g">G</label>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+    
+    <!--Sabor-->
+        Sabor
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="ninho c/ morango" id="ninho c/ morango" onchange="calc(40,this.checked)">
+          <label class="form-check-label" for="morango">
+            Ninho c/ morango
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="ninho c/ crocante" id="ninho c/ croc" onchange="calc(40,this.checked)">
+          <label class="form-check-label" for="croc">
+            Ninho c/ crocante
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="prestigio" id="prestigio" onchange="calc(38,this.checked)">
+          <label class="form-check-label" for="prestigio">
+            Prestígio
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="frutas vermelhas" id="frutas vermelhas" onchange="calc(38,this.checked)">
+          <label class="form-check-label" for="frutas">
+            Frutas vermelhas
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="brigadeiro" id="briga" onchange="calc(36,this.checked)">
+          <label class="form-check-label" for="briga">
+            Brigadeiro
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="doce de leite" id="leite" onchange="calc(36,this.checked)">
+          <label class="form-check-label" for="doce">
+            Doce de leite
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="maracuja" id="maracuja" onchange="calc(36,this.checked)">
+          <label class="form-check-label" for="maracuja">
+            Maracujá
+          </etiqueta>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+
+    <!--Decoração-->
+        Decoração
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="naked" id="naked">
+          <label class="form-check-label" for="naked">
+            Naked
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="glace" id="glace">
+          <label class="form-check-label" for="glace">
+            Glace real
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="chantilly" id="chantilly">
+          <label class="form-check-label" for="chantilly">
+            Chantilly
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="pasta" id="pasta">
+          <label class="form-check-label" for="pasta">
+            Pasta americana
+          </etiqueta>
+        </div>
+        
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="butter" id="butter">
+          <label class="form-check-label" for="butter">
+            Buttercream
+          </etiqueta>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="simples" id="simples">
+          <label class="form-check-label" for="simples">
+            Simples
+          </etiqueta>
+        </div>
+      </div>
+
+      <div class ="col-md-6" id="preco">
+          R$ <output id="total"> 0 </output>,00   
+    </div>
+
+      <div class="col-12">
+        <button type="reset" class="bnt bnt-primary"> Limpar </button>
+        <button type="button" class="bnt bnt-sucess"> Encomendar</button>
+      </div>
+    </form>
+    </section>
+
+    <script src="js/script.js"></script>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+body{
+    background-color: red;
+    background-size: cover;
+    background-image: url(../img/img\ 1-prova\ ltpw\ \(Jéssica\).jpg);
+    background-attachment: fixed;
+    
+}
+#container{
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 2%;
+    background-color: rgba(255,255,255,0.7);
+    padding: 2%;
+}
+h1{
+    margin-bottom: 4%;
+    background-color: #ffe0e0;
+}
+#titulo{
+    text-transform: uppercase;
+    font-weight: bold;
+}
