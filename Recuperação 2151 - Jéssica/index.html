@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Barbearia da Jessi</title>
+  </head>
+  <body>
+    <h1>Escolha seus Serviços</h1>
+    <hr>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <h5>Tipo de Corte</h5>
+            <div class="card" style="width: 100%;">
+                <img src="img/corteTesoura.jpg" class="card-img-top" alt="Cortes">
+                <div class="card-body" id="foto">
+                    <select class="form-select" id="corte" aria-label="Default select example" onchange="calcularPedido()">
+                        <option value="Tesoura">Corte com Tesoura - R$ 60,00</option>
+                        <option value="Maquina">Corte com Maquina - R$ 45,00</option>
+                        <option value="TesEMaq">Corte Tesoura e Máquina - R$ 52,00</option>
+                      </select>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <h5>Modelo Barba</h5>
+            <div class="card" style="width: 100%;">
+                <img src="img/barbaSimples.png" class="card-img-top" alt="Barba">
+                <div class="card-body" id="foto">
+                    <select class="form-select" id="barba" aria-label="Default select example" onchange="calcularPedido()">
+                        <option value="Simples">Simples - 30,00</option>
+                        <option value="Modelada">Modelada - 45,00</option>
+                      </select>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <h5>Modelo Depilação</h5>
+            <div class="card" style="width: 100%;">
+                <img src="img/depilacao.jpg" class="card-img-top" alt="Depilacao">
+                <div class="card-body" id="foto">
+                    <select class="form-select" id="depilacao" aria-label="Default select example" onchange="calcularPedido()">
+                        <option value="Cera quente">Cera Quente - 300,00</option>
+                        <option value="Cera fria">Cera Fria – 250,00</option>
+                        <option value="Laser">Laser - 850,00</option>
+                      </select>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 100%">
+                <div class="card-body">
+                  <h5 class="card-title form-control btn-danger text-center">Total Pedido</h5>
+                  <h3 class="text-center"> R$ <output id="total">0.00</output></h3>
+                  <button type="button" class="btn btn-primary form-control">Finalizar</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
